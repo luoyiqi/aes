@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/changeColor"
+        android:onClick="change"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/change_color"/>
+    <item
+        android:id="@+id/repetChangeColor"
+        android:onClick="repet"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/repet_change_color"/>
+    <item
+        android:id="@+id/programChangeColor"
+        android:onClick="scheduled"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/scheduled_change_color"/>
+
+</menu>

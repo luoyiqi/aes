@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FramentsExample</string>
+    <string name="action_settings">Settings</string>
+    <string name="splash">Splash!</string>
+    <string name="change_color">Alterar</string>
+    <string name="repet_change_color">Repetir</string>
+    <string name="scheduled_change_color">Programar</string>
+    <string name="title_activity_splash">Splash</string>
+
+</resources>
