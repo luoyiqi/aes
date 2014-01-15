@@ -15,11 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-public class MyFirstFrament extends Fragment {
+public class RespostaFragment extends Fragment implements iAES{
 
-	private LinearLayout linearLayout;
+	private static LinearLayout linearLayout;
+	
 	private BroadcastReceiver receiver = new BroadcastReceiver() {
-
 		@Override
 		public void onReceive(Context context, Intent intent) {
 			ColorDrawable colorDrawable = (ColorDrawable) linearLayout.getBackground();
@@ -35,9 +35,8 @@ public class MyFirstFrament extends Fragment {
 			}
 		}
 	};
-	
-	private BroadcastReceiver localReceiver = new BroadcastReceiver() {
 
+	private BroadcastReceiver localReceiver = new BroadcastReceiver() {
 		@Override
 		public void onReceive(Context context, Intent intent) {
 			ColorDrawable colorDrawable = (ColorDrawable) linearLayout.getBackground();
@@ -51,28 +50,26 @@ public class MyFirstFrament extends Fragment {
 			} else {
 				linearLayout.setBackgroundColor(Color.BLUE);
 			}
-
 		}
 	};
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		this.linearLayout = (LinearLayout) inflater.inflate(R.layout.item, null);
-		return this.linearLayout;
+		linearLayout = (LinearLayout) inflater.inflate(R.layout.resposta, null);
+		return linearLayout;
 	}
 
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
-		LocalBroadcastManager.getInstance(activity).registerReceiver(localReceiver, new IntentFilter("localChangeColor"));
-		getActivity().registerReceiver(receiver, new IntentFilter("changeColor"));
+		getActivity().registerReceiver(receiver, new IntentFilter(CHANGE_COLOR));
+		LocalBroadcastManager.getInstance(activity).registerReceiver(localReceiver, new IntentFilter(LOCAL_CHANGE_COLOR));
 	}
 
 	@Override
 	public void onDetach() {
 		super.onDetach();
-		LocalBroadcastManager.getInstance(getActivity()).unregisterReceiver(receiver);
+		getActivity().unregisterReceiver(receiver);
 		LocalBroadcastManager.getInstance(getActivity()).unregisterReceiver(localReceiver);
 	}
-
 }

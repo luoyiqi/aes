@@ -12,7 +12,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements iAES{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +25,15 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
+	
 	public void change(MenuItem menuItem) {
 		cancelImpl();
-		LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("localChangeColor"));
+		LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(LOCAL_CHANGE_COLOR));
 	}
 
 	public void scheduled(MenuItem menuItem) {
 		cancelImpl();
-		Intent intent = new Intent("changeColor");
+		Intent intent = new Intent(CHANGE_COLOR);
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
 		AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 		Calendar calendar = Calendar.getInstance();
@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
 
 	public void repet(MenuItem menuItem) {
 		cancelImpl();
-		Intent intent = new Intent("changeColor");
+		Intent intent = new Intent(CHANGE_COLOR);
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
 		AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 		Calendar calendar = Calendar.getInstance();
@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void cancelImpl() {
-		Intent intent = new Intent("changeColor");
+		Intent intent = new Intent(CHANGE_COLOR);
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
 		AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 		alarmManager.cancel(pendingIntent);

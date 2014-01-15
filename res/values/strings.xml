@@ -8,5 +8,8 @@
     <string name="repet_change_color">Repetir</string>
     <string name="scheduled_change_color">Programar</string>
     <string name="title_activity_splash">Splash</string>
+    <string name="enviar">Enviar</string>
+    <string name="enviarAsync">Enviar Async.</string>
+    <string name="enviarBroadcast">Enviar Broad.</string>
 
 </resources>

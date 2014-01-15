@@ -12,17 +12,13 @@ public class SplashActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash);
-		
 		new Handler().postDelayed(new Runnable() {
-			
 			@Override
 			public void run() {
 				SplashActivity.this.startActivity(new Intent(SplashActivity.this, MainActivity.class));
 				SplashActivity.this.finish();
-				
 			}
 		}, 3 * 1000);
-		
 	}
 
 	@Override
@@ -30,5 +26,4 @@ public class SplashActivity extends Activity {
 		getMenuInflater().inflate(R.menu.splash, menu);
 		return true;
 	}
-
 }
