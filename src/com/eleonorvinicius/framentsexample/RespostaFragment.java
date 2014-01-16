@@ -16,23 +16,21 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class RespostaFragment extends Fragment implements iAES{
+public class RespostaFragment extends Fragment implements iAES {
 
 	private static LinearLayout linearLayout;
 
 	private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
 		@Override
 		public void onReceive(Context context, Intent intent) {
-			
+
 			int resultado = intent.getIntExtra(RESULTADO, DEFAULT_INT_VALUE);
-			
+
 			TextView textView = (TextView) linearLayout.findViewById(R.id.textView1);
 
-			
-			
 		}
 	};
-	
+
 	private BroadcastReceiver receiver = new BroadcastReceiver() {
 		@Override
 		public void onReceive(Context context, Intent intent) {

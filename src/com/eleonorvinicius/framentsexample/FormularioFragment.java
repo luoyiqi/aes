@@ -21,7 +21,7 @@ public class FormularioFragment extends Fragment implements iAES {
 
 	private static LinearLayout linearLayout;
 
-	static Handler handler = new Handler(){
+	static Handler handler = new Handler() {
 		@Override
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
@@ -43,30 +43,30 @@ public class FormularioFragment extends Fragment implements iAES {
 		enviar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				new Thread(){
+				new Thread() {
 					@Override
 					public void run() {
 						Integer k = calcular();
-						
+
 						Bundle bundle = new Bundle();
 						bundle.putInt(RESULTADO, k);
-						
+
 						Message message = new Message();
 						message.what = FORMULARIO_ENVIAR_ASYNC;
-						
+
 						message.setData(bundle);
 						handler.sendMessage(message);
 					}
 				}.start();
 			}
 		});
-		
+
 		Button enviarAsync = (Button) linearLayout.findViewById(R.id.button2);
 		enviarAsync.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				
+
 				new AsyncTask<Void, Integer, Integer>() {
 					@Override
 					protected Integer doInBackground(Void... params) {
@@ -75,13 +75,13 @@ public class FormularioFragment extends Fragment implements iAES {
 						publishProgress(1);
 						return calcular;
 					}
-					
+
 					@Override
 					protected void onPostExecute(Integer result) {
 						super.onPostExecute(result);
 						((TextView) linearLayout.findViewById(R.id.textView2)).setText(String.valueOf(result));
 					}
-					
+
 					@Override
 					protected void onProgressUpdate(Integer... values) {
 						super.onProgressUpdate(values);
@@ -90,10 +90,10 @@ public class FormularioFragment extends Fragment implements iAES {
 				}.execute();
 			}
 		});
-		
+
 		Button enviarBroad = (Button) linearLayout.findViewById(R.id.button3);
 		enviarBroad.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				new AsyncTask<Void, Integer, Integer>() {
@@ -104,7 +104,7 @@ public class FormularioFragment extends Fragment implements iAES {
 						publishProgress(1);
 						return calcular;
 					}
-					
+
 					@Override
 					protected void onPostExecute(Integer result) {
 						super.onPostExecute(result);
@@ -112,7 +112,7 @@ public class FormularioFragment extends Fragment implements iAES {
 						intent.putExtra(RESULTADO, result);
 						LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
 					}
-					
+
 					@Override
 					protected void onProgressUpdate(Integer... values) {
 						super.onProgressUpdate(values);
@@ -123,14 +123,14 @@ public class FormularioFragment extends Fragment implements iAES {
 		});
 		return linearLayout;
 	}
-	
+
 	private Integer calcular() {
 		EditText editText1 = (EditText) getView().findViewById(R.id.editText1);
 		EditText editText2 = (EditText) getView().findViewById(R.id.editText2);
-		
+
 		String string = editText1.getText().toString();
 		String string2 = editText2.getText().toString();
-		
+
 		Integer i = new Integer(string);
 		Integer j = new Integer(string2);
 		return i + j;

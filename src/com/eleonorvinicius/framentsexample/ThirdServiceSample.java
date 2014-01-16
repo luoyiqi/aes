@@ -18,7 +18,7 @@ public class ThirdServiceSample extends Service {
 		this.items = new ArrayList<String>();
 		this.iBinder = new MyBinder();
 	}
-	
+
 	public List<String> getItems() {
 		return this.items;
 	}
@@ -30,7 +30,7 @@ public class ThirdServiceSample extends Service {
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		super.onStartCommand(intent, flags, startId);
+		// super.onStartCommand(intent, flags, startId);
 
 		Random random = new Random();
 		if (random.nextBoolean()) {

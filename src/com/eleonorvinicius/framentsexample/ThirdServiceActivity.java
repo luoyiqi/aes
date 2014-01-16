@@ -49,7 +49,7 @@ public class ThirdServiceActivity extends ListActivity {
 		Intent intent = new Intent(this, ThirdServiceSample.class);
 		bindService(intent, this.serviceConnection, Context.BIND_AUTO_CREATE);
 	}
-	
+
 	@Override
 	protected void onPause() {
 		super.onPause();
@@ -62,7 +62,7 @@ public class ThirdServiceActivity extends ListActivity {
 		setContentView(R.layout.service);
 
 		this.wordList = new ArrayList<String>();
-		this.adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, this.wordList);
+		this.adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, this.wordList);
 
 		setListAdapter(this.adapter);
 	}

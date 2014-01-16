@@ -9,7 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-public class MyScheduleServiceBroadcastReceiver extends BroadcastReceiver implements iAES{
+public class MyScheduleServiceBroadcastReceiver extends BroadcastReceiver implements iAES {
 
 	private static final long REPEAT_TIME = 10 * 1000;
 

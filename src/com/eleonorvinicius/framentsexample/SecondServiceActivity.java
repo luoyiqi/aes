@@ -16,8 +16,8 @@ public class SecondServiceActivity extends Activity {
 	public void start(View view) {
 		startService(new Intent(this, SecondServiceSample.class));
 	}
-	
-	public void stop(View view){
+
+	public void stop(View view) {
 		stopService(new Intent(this, SecondServiceSample.class));
 	}
 }

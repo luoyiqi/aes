@@ -12,7 +12,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends Activity implements iAES{
+public class MainActivity extends Activity implements iAES {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class MainActivity extends Activity implements iAES{
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
+
 	public void change(MenuItem menuItem) {
 		cancelImpl();
 		LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(LOCAL_CHANGE_COLOR));

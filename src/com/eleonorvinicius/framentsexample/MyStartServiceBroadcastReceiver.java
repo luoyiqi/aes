@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-public class MyStartServiceBroadcastReceiver extends BroadcastReceiver implements iAES{
+public class MyStartServiceBroadcastReceiver extends BroadcastReceiver implements iAES {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {

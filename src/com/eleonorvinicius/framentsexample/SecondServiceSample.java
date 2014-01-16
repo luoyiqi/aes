@@ -9,10 +9,10 @@ import android.util.Log;
  * nao consegue "interagir" (para um player de musica, por exemplo)
  */
 public class SecondServiceSample extends IntentService {
-	
+
 	private static final String SECOND_SERVICE_SAMPLE = "SecondServiceSample";
 	private int count;
-	
+
 	public SecondServiceSample() {
 		super(SECOND_SERVICE_SAMPLE);
 	}
@@ -20,17 +20,17 @@ public class SecondServiceSample extends IntentService {
 	@Override
 	protected void onHandleIntent(Intent arg0) {
 		Log.i(SECOND_SERVICE_SAMPLE, "run");
-		while (count < 10){
-			try{
+		while (count < 10) {
+			try {
 				Thread.sleep(1 * 1000);
 				count += 1;
 				Log.i(SECOND_SERVICE_SAMPLE, "run - count: " + count);
 			} catch (InterruptedException exception) {
-				
+
 			}
 		}
 	}
-	
+
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
