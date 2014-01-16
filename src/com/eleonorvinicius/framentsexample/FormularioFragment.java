@@ -1,10 +1,12 @@
 package com.eleonorvinicius.framentsexample;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,16 +19,13 @@ import android.widget.TextView;
 
 public class FormularioFragment extends Fragment implements iAES {
 
-	private LinearLayout linearLayout;
+	private static LinearLayout linearLayout;
 
-	/*
-	 * FIXME static?
-	 */
-	Handler handler = new Handler(){
+	static Handler handler = new Handler(){
 		@Override
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
-			case FORMULARIO_ENVIAR:
+			case FORMULARIO_ENVIAR_ASYNC:
 				Bundle data = msg.getData();
 				int int1 = data.getInt(RESULTADO);
 				((TextView) linearLayout.findViewById(R.id.textView1)).setText(String.valueOf(int1));
@@ -53,7 +52,7 @@ public class FormularioFragment extends Fragment implements iAES {
 						bundle.putInt(RESULTADO, k);
 						
 						Message message = new Message();
-						message.what = FORMULARIO_ENVIAR;
+						message.what = FORMULARIO_ENVIAR_ASYNC;
 						
 						message.setData(bundle);
 						handler.sendMessage(message);
@@ -109,10 +108,9 @@ public class FormularioFragment extends Fragment implements iAES {
 					@Override
 					protected void onPostExecute(Integer result) {
 						super.onPostExecute(result);
-						
-						
-						
-						
+						Intent intent = new Intent(ENVIAR_BROADCAST);
+						intent.putExtra(RESULTADO, result);
+						LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(intent);
 					}
 					
 					@Override
@@ -121,8 +119,6 @@ public class FormularioFragment extends Fragment implements iAES {
 						Log.i("FormularioFragment.enviarBroad", String.valueOf(values[0]));
 					}
 				}.execute();
-
-				
 			}
 		});
 		return linearLayout;

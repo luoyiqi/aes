@@ -11,5 +11,13 @@
     <string name="enviar">Enviar</string>
     <string name="enviarAsync">Enviar Async.</string>
     <string name="enviarBroadcast">Enviar Broad.</string>
+    <string name="title_activity_service">Service</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="status">Status</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="not_yet">Not yet!</string>
+    
 
 </resources>
