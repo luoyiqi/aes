@@ -52,5 +52,8 @@
         <service android:name="com.eleonorvinicius.framentsexample.ServiceSample" />
         <service android:name="com.eleonorvinicius.framentsexample.SecondServiceSample" />
         <service android:name="com.eleonorvinicius.framentsexample.ThirdServiceSample" />
+        
+        <receiver android:name="com.eleonorvinicius.framentsexample.MyScheduleServiceBroadcastReceiver"/>
+        <receiver android:name="com.eleonorvinicius.framentsexample.MyStartServiceBroadcastReceiver"/>
     </application>
 </manifest>
