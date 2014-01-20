@@ -1,4 +1,4 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.um;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -16,6 +16,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.eleonorvinicius.androidexamples.iAES;
+import com.eleonorvinicius.framentsexample.R;
 
 public class FormularioFragment extends Fragment implements iAES {
 

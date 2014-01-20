@@ -1,10 +1,12 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.um;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
+
+import com.eleonorvinicius.framentsexample.R;
 
 public class SplashActivity extends Activity {
 

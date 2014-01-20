@@ -1,4 +1,4 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples;
 
 public interface iAES {
 	public String CHANGE_COLOR = "changeColor";

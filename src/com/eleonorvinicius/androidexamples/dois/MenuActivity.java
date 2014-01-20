@@ -1,4 +1,4 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.dois;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.eleonorvinicius.androidexamples.quatro.ThirdServiceActivity;
+import com.eleonorvinicius.androidexamples.tres.SecondServiceActivity;
+import com.eleonorvinicius.framentsexample.R;
 
 public class MenuActivity extends ListActivity {
 

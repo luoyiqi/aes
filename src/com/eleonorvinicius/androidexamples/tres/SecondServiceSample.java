@@ -1,4 +1,4 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.tres;
 
 import android.app.IntentService;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.quatro;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,9 @@ import android.os.IBinder;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
+
+import com.eleonorvinicius.androidexamples.dois.ServiceSample;
+import com.eleonorvinicius.framentsexample.R;
 
 public class ThirdServiceActivity extends ListActivity {
 
@@ -68,10 +71,16 @@ public class ThirdServiceActivity extends ListActivity {
 	}
 
 	public void start(View view) {
+		/*
+		 * FIXME ServiceSample ou ThirdServiceSample
+		 */
 		startService(new Intent(this, ServiceSample.class));
 	}
 
 	public void stop(View view) {
+		/*
+		 * FIXME ServiceSample ou ThirdServiceSample
+		 */
 		stopService(new Intent(this, ServiceSample.class));
 	}
 }

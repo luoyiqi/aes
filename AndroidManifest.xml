@@ -15,17 +15,17 @@
         android:theme="@style/AppTheme" >
         
         <activity
-            android:name="com.eleonorvinicius.framentsexample.MainActivity"
+            android:name="com.eleonorvinicius.androidexamples.um.MainActivity"
             android:label="@string/app_name" >
         </activity>
         
         <activity
-            android:name="com.eleonorvinicius.framentsexample.SplashActivity"
+            android:name="com.eleonorvinicius.androidexamples.um.SplashActivity"
             android:label="@string/title_activity_splash" >
         </activity>
         
         <activity
-            android:name="com.eleonorvinicius.framentsexample.MenuActivity"
+            android:name="com.eleonorvinicius.androidexamples.dois.MenuActivity"
             android:label="@string/title_activity_menu" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,25 +35,25 @@
         </activity>
         
         <activity
-            android:name="com.eleonorvinicius.framentsexample.ServiceActivity"
+            android:name="com.eleonorvinicius.androidexamples.dois.ServiceActivity"
             android:label="@string/title_activity_service" >
         </activity>
         
         <activity
-            android:name="com.eleonorvinicius.framentsexample.SecondServiceActivity"
+            android:name="com.eleonorvinicius.androidexamples.tres.SecondServiceActivity"
             android:label="@string/title_activity_service" >
         </activity>
         
         <activity
-            android:name="com.eleonorvinicius.framentsexample.ThirdServiceActivity"
+            android:name="com.eleonorvinicius.androidexamples.quatro.ThirdServiceActivity"
             android:label="@string/title_activity_service" >
         </activity>
         
-        <service android:name="com.eleonorvinicius.framentsexample.ServiceSample" />
-        <service android:name="com.eleonorvinicius.framentsexample.SecondServiceSample" />
-        <service android:name="com.eleonorvinicius.framentsexample.ThirdServiceSample" />
+        <service android:name="com.eleonorvinicius.androidexamples.dois.ServiceSample" />
+        <service android:name="com.eleonorvinicius.androidexamples.tres.SecondServiceSample" />
+        <service android:name="com.eleonorvinicius.androidexamples.quatro.ThirdServiceSample" />
         
-        <receiver android:name="com.eleonorvinicius.framentsexample.MyScheduleServiceBroadcastReceiver"/>
-        <receiver android:name="com.eleonorvinicius.framentsexample.MyStartServiceBroadcastReceiver"/>
+        <receiver android:name="com.eleonorvinicius.androidexamples.dois.MyScheduleServiceBroadcastReceiver"/>
+        <receiver android:name="com.eleonorvinicius.androidexamples.dois.MyStartServiceBroadcastReceiver"/>
     </application>
 </manifest>

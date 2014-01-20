@@ -1,4 +1,4 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.um;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -15,6 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.eleonorvinicius.androidexamples.iAES;
+import com.eleonorvinicius.framentsexample.R;
 
 public class RespostaFragment extends Fragment implements iAES {
 

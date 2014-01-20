@@ -1,4 +1,4 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.um;
 
 import java.util.Calendar;
 
@@ -11,6 +11,9 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.eleonorvinicius.androidexamples.iAES;
+import com.eleonorvinicius.framentsexample.R;
 
 public class MainActivity extends Activity implements iAES {
 

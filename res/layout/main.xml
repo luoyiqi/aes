@@ -8,12 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        class="com.eleonorvinicius.framentsexample.FormularioFragment" />
+        class="com.eleonorvinicius.androidexamples.um.FormularioFragment" />
 
     <fragment
         android:id="@+id/fragment2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        class="com.eleonorvinicius.framentsexample.RespostaFragment" />
+        class="com.eleonorvinicius.androidexamples.um.RespostaFragmentent" />
 
 </LinearLayout>

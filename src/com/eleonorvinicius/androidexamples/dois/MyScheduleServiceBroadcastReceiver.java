@@ -1,4 +1,4 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.dois;
 
 import java.util.Calendar;
 
@@ -8,6 +8,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+
+import com.eleonorvinicius.androidexamples.iAES;
 
 public class MyScheduleServiceBroadcastReceiver extends BroadcastReceiver implements iAES {
 

@@ -1,4 +1,4 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.quatro;
 
 import java.util.ArrayList;
 import java.util.List;

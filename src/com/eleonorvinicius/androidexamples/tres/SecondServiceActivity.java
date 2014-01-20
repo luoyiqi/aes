@@ -1,11 +1,13 @@
-package com.eleonorvinicius.framentsexample;
+package com.eleonorvinicius.androidexamples.tres;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ServiceActivity extends Activity {
+import com.eleonorvinicius.framentsexample.R;
+
+public class SecondServiceActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -14,10 +16,10 @@ public class ServiceActivity extends Activity {
 	}
 
 	public void start(View view) {
-		startService(new Intent(this, ServiceSample.class));
+		startService(new Intent(this, SecondServiceSample.class));
 	}
 
 	public void stop(View view) {
-		stopService(new Intent(this, ServiceSample.class));
+		stopService(new Intent(this, SecondServiceSample.class));
 	}
 }
